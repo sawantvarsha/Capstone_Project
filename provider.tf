@@ -6,8 +6,8 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "jayakrishna-bucket" # bucket name you have created in s3
-    key    = "jk"  # path where you need store the files in that bucket
+    bucket = "varshasawant-bucket" # bucket name you have created in s3
+    key    = "vs"  # path where you need store the files in that bucket
     region = "us-east-1" # region
   }
 
