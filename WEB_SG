@@ -1,0 +1,19 @@
+resource "aws_security_group" "web" {
+  name        = "web-sg"
+  description = "Security group for web server"
+
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] # Replace with your actual IP address
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1" # All protocols
+    cidr_blocks = ["0.0.0.0/0"] #replce by myip
+  }
+
+}
