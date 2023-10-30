@@ -1,0 +1,13 @@
+resource "aws_security_group" "private_sg" {
+  name_prefix   = "private-sg-"
+  description   = "Security group for private EC2 instances"
+
+
+  #Define inbound and outbound rules as needed
+  # Example rule: Allow inbound SSH access from a specific IP range
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] # Adjust the IP range as needed
+  }
