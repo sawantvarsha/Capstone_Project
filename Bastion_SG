@@ -1,0 +1,12 @@
+resource "aws_security_group" "bastion_sg" {
+  name        = "bastion-sg"
+  description = "Security group for the bastion server"
+
+  # Allow incoming SSH traffic from trusted IP addresses
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] #replace by MY IP
+  }
+}
